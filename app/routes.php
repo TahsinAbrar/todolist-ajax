@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+//Route::get('/', function()
+//{
+//	return View::make('hello');
+//});
+Route::get('add/',array('before' => 'ajax_check', function(){
+    return 'The Request is AJAX';
+}));
+Route::controller('/', 'TodoController');

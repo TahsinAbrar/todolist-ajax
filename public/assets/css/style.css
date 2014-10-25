@@ -1,0 +1,9 @@
+.todo-controls {list-style: none;}
+.btn{
+    background-color: green;
+    width: 140px;
+    height: 40px;
+    color: whitesmoke;
+    font-size: 21px;
+    border-radius: 25px;
+}
