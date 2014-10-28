@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"/>
 <!--[if lt IE 9]><script
-src="//html5shim.googlecode.com/svn/trunk/html5.js">
+src="http://html5shim.googlecode.com/svn/trunk/html5.js">
 </script><![endif]-->
 </head>
 <body>
@@ -36,7 +36,7 @@ src="//html5shim.googlecode.com/svn/trunk/html5.js">
             @else
             <li id="{{$todo->id}}">
                 <span id="span_{{$todo->id}}">{{$todo->title}}</span>
-                <a href="#" onclick="task_done('{{$todo->id}}');"><i class="fa fa-check-square"></i> Done</a>
+                <a id="complete_{{ $todo->id }}" href="#" onclick="task_done('{{$todo->id}}');"><i class="fa fa-check-square"></i> Done</a>
                 <a href="#" onclick="delete_task('{{$todo->id}}');"><i class="fa fa-trash-o fa-lg"></i> Delete</a>
                 <a href="#" onclick="edit_task('{{$todo->id}}','{{$todo->title}}');"><i class="fa fa-pencil fa-fw"></i> Edit</a>
             </li><br/>

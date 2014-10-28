@@ -2,6 +2,8 @@ function task_done(id){
     $.get("/done/"+id, function(data) {
         if(data=="OK"){
             $("#"+id).addClass("done");
+            var target = $("#complete_"+id);
+            target.hide("slow",function(){ target.remove() });
         }
     });
 }
